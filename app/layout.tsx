@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "Stuart-hotel",
   description: "trouver l'hotel qui vous convient",
   icons: { icon: '/logo.svg' }
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FFFFFF",
 };
 
 
