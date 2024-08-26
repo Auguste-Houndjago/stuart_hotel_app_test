@@ -1,0 +1,138 @@
+##page
+import { getHotelById } from "@/actions/getHotelById";
+import AddHotelForm from "@/components/hotel/AddHotelForm"
+import { auth } from "@clerk/nextjs";
+
+interface HotelPageProps {
+  params: {
+    hotelId: string;
+  };
+}
+
+
+export default async function Hotel({ params }: HotelPageProps) {
+  console.log('hotelId bb: ' , params.hotelId);
+  
+
+  // const hotel = await getHotelById(params.hotelId);
+
+const hotel =await getHotelById(params.hotelId)
+const {userId} =auth()
+
+if(!userId) return <div>Not authenticated...</div>
+
+if(hotel && hotel.userId !== userId) return <div> acces refuser</div>
+
+  return (
+    <div>
+      <AddHotelForm hotel={hotel} />
+    </div>
+  );
+}
+
+
+
+==============================addhotelform
+
+
+import { Hotel, Room } from "@prisma/client"
+
+
+interface AddHotelFormProps{
+  hotel: HotelWithRooms | null
+
+}
+
+export type HotelWithRooms = Hotel & {
+    rooms: Room[]
+  }
+
+
+
+
+const AddHotelForm = ({hotel}: AddHotelFormProps ) => {
+  return(
+    <div>
+      Add hotel page
+    </div>
+
+  );
+}
+
+export default AddHotelForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================
+'use client'
+
+
+import { Hotel, Room } from "@prisma/client"
+
+
+
+
+
+
+
+const AddHotelForm = () => {
+  return(
+    <div>
+      Add hotel page
+    </div>
+
+  );
+}
+
+export default AddHotelForm;
+
+
+
+
+import { auth } from "@clerk/nextjs";
+
+import { getHotelById } from "@/actions/getHotelById";
+
+import AddHotelForm from "@/components/hotel/AddHotelForm"
+
+
+interface HotelPageProps {
+  params: {
+    hotelId: string;
+  };
+}
+
+
+export default async function Hotel() {
+
+  return (
+    <div>
+      <AddHotelForm  />
+    </div>
+  );
+}
+
+
+
+
+=========================================
+// interface AddHotelFormProps {
+//   hotel: HotelWithRooms | null
+// }
+
+// export type HotelWithRooms = Hotel & {
+//   rooms: Room[]
+// }
+
+===============================================

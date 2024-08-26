@@ -1,0 +1,77 @@
+[
+  {
+    "_id": "661139b0545ce243e916c9bl",
+    "name": "Fatima Mohamed",
+    "age": 24,
+    "tel": [
+      11112222,
+      22223333,
+      33334444
+    ],
+    "adress": {
+      "pays": "Égypte",
+      "ville": "Le Caire",
+      "situationEconomique": "En progression"
+    }
+  },
+  {
+    "_id": "661139b0545ce243e916c9bm",
+    "name": "Jean Dupont",
+    "age": 30,
+    "tel": [
+      55556666,
+      66667777,
+      77778888
+    ],
+    "adress": {
+      "pays": "France",
+      "ville": "Paris",
+      "situationEconomique": "Stable"
+    }
+  },
+  {
+    "_id": "661139b0545ce243e916c9bn",
+    "name": "Maria Garcia",
+    "age": 35,
+    "tel": [
+      12345678,
+      23456789,
+      34567890
+    ],
+    "adress": {
+      "pays": "Espagne",
+      "ville": "Madrid",
+      "situationEconomique": "Fluctuante"
+    }
+  },
+  {
+    "_id": "661139b0545ce243e916c9bo",
+    "name": "Chen Wei",
+    "age": 40,
+    "tel": [
+      77777777,
+      88888888,
+      99999999
+    ],
+    "adress": {
+      "pays": "Chine",
+      "ville": "Shanghai",
+      "situationEconomique": "En croissance rapide"
+    }
+  },
+  {
+    "_id": "661139b0545ce243e916c9bp",
+    "name": "Adam Smith",
+    "age": 35,
+    "tel": [
+      44444444,
+      55555555,
+      66666666
+    ],
+    "adress": {
+      "pays": "Égypte",
+      "ville": "Le Caire",
+      "situationEconomique": "En progression"
+    }
+  }
+]
